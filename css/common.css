@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1b2f43;
+  color: #212121;
+  line-height: 1.5;
+}
+
+input {
+  padding: 8px;
+  font: inherit;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+:root {
+  --taskLink: #31d0aa;
+  --taskLinkActive: #57f7d2;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tasks-list {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style: none;
+}
+.tasks-list__item {
+  width: calc((100% - 400px) / 3);
+}
+.task-list__link {
+  background: var(--taskLink);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: #1b2f43;
+  font-size: 24px;
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.task-list__link:hover,
+.task-list__link:focus {
+  background-color: var(--taskLinkActive);
+  transform: scale(1.04);
+}
