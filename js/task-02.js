@@ -18,11 +18,16 @@ const listEl = document.getElementById('ingredients');
 // });
 
 //! 2
-const markup = ingredients.map(el => {
-  const liEl = document.createElement('li');
-  liEl.classList.add('item');
-  liEl.textContent = `${el}`
-  return liEl.outerHTML;
-}).join('');
+// const markup = ingredients.map(el => {
+//   const liEl = document.createElement('li');
+//   liEl.classList.add('item');
+//   liEl.textContent = `${el}`
+//   return liEl.outerHTML;
+// }).join('');
 
-listEl.insertAdjacentHTML('beforeend', markup);
+// listEl.insertAdjacentHTML('beforeend', markup);
+
+//! 3
+const newList = ingredients.map(el => `<li class='item'>${el}</li>`).join('');
+
+listEl.insertAdjacentHTML('beforeend', newList);
